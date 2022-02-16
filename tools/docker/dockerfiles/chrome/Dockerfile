@@ -1,4 +1,4 @@
-FROM balenalib/raspberrypi3-debian:jessie
+FROM balenalib/raspberrypi3-debian:buster
 ARG CHROMIUM_BASEURL=https://launchpad.net/~canonical-chromium-builds/+archive/ubuntu/stage/+build/8883797/+files
 ARG CHROMIUM_DEB_FILE1=chromium-codecs-ffmpeg-extra_48.0.2564.82-0ubuntu0.15.04.1.1193_armhf.deb
 ARG CHROMIUM_DEB_FILE2=chromium-browser_48.0.2564.82-0ubuntu0.15.04.1.1193_armhf.deb
