@@ -3,7 +3,6 @@
 Hopefully a dockerised web browser to display a webpage as a kiosk
 
 ##Install
-````
 1- clone current project
 ````
 git clone https://github.com/mwinterstorm/rspi-kiosk.git
