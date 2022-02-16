@@ -9,8 +9,6 @@ services:
     restart: unless-stopped
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
-    links:
-      - project
     stdin_open: true
     tty: true
     privileged: true
@@ -25,7 +23,6 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     links:
-      - project
       - x11
     stdin_open: true
     tty: true
