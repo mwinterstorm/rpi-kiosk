@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:jessie
+FROM balenalib/raspberrypi3-64-debian:jessie
 RUN sudo apt-get update && sudo apt-get install --no-install-recommends -y \
 	openbox \
     xserver-xorg \
