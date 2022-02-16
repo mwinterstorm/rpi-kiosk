@@ -9,7 +9,7 @@ git clone https://github.com/mwinterstorm/rspi-kiosk.git
 ````
 2- edit docker-compose.yml
 ````
-cd rspi-kiosk
+cd rpi-kiosk
 nano docker-compose.yml
 ````
 - replace [insertwebpage] with web page
