@@ -10,5 +10,5 @@ RUN sudo apt-get update && \
     wget -O /tmp/$CHROMIUM_DEB_FILE2 $CHROMIUM_BASEURL/$CHROMIUM_DEB_FILE2
 
 COPY install-chromium-browser.sh /
-RUN sudo /install-chromium-browser.sh
+CMD  ["/install-chromium-browser.sh"]
 USER chromium
