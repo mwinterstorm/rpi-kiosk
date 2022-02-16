@@ -6,7 +6,7 @@ services:
     environment:
       - DISPLAY=:0
       - QT_X11_NO_MITSHM=1
-    restart: always
+    restart: unless-stopped
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     links:
@@ -17,8 +17,8 @@ services:
 
   chrome:
     build: ./tools/docker/dockerfiles/chrome/
-    command: chromium-browser --kiosk http://192.168.0.25:8096 --no-first-run --touch-events=enabled --fast --fast-start --disable-popup-blocking --disable-infobars --disable-session-crashed-bubble --disable-tab-switcher --disable-translate --enable-low-res-tiling
-    restart: always
+    command: chromium-browser --kiosk http://[insertwebpage] --no-first-run --fast --fast-start --disable-popup-blocking --disable-infobars --disable-session-crashed-bubble --disable-tab-switcher --disable-translate --enable-low-res-tiling
+    restart: unless-stopped
     environment:
       - DISPLAY=:0
       - QT_X11_NO_MITSHM=1
