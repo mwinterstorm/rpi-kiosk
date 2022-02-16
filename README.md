@@ -1,28 +1,22 @@
 # raspi-kiosk
 
-This project is an attempt to provide a node js kiosk boilerplate. The Idea is to build a kiosk display by using a
-raspberry pi and node JS. It takes leverage of the process called Infrastructure as Code (IaC) to provide an
-infrastructure and the configuration needed for this display. This will help us reduce manual processes for
-configuration and installation of different dependencies.
+Hopefully a dockerised web browser to display a webpage as a kiosk
 
 ##Install
-1- Flash the sd card
-
 ````
-flash -s [wifi ssid] -p [wifi pass] http://downloads.hypriot.com/hypriot-rpi-20151115-132854.img.zip
+1- clone current project
 ````
-2- ssh to raspberry pi
+git clone https://github.com/mwinterstorm/rspi-kiosk.git
 ````
-ssh pirate@black-pearl.local
-password: hypriot
-````
-3- clone current project
-````
-git clone https://github.com/logu/rspi-kiosk.git
-````
-4- launch docker-compose
+2- edit docker-compose.yml
 ````
 cd rspi-kiosk
+nano docker-compose.yml
+````
+- replace [insertwebpage] with web page
+
+4 - launch docker-compose
+````
 docker-compose up -d
 ````
 
